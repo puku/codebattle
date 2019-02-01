@@ -23,6 +23,7 @@ jobs:
         - docker pull codebattle/haskell:8.4.3
         - docker pull codebattle/perl:5.26.2
         - docker-compose -f services/app/docker-compose.test.yml run sut
+        - cd services/app && yarn run eslint ./assets/
     # - stage: build and push docker image
       # if: branch = master
       # script:
