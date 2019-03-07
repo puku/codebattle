@@ -27,6 +27,8 @@ services:
       POSTGRES_USER: ${CODEBATTLE_DB_USERNAME}
     volumes:
       - pg_data:/var/lib/postgresql/data
+    ports:
+     - 5432:5432
 
 volumes:
   pg_data:
